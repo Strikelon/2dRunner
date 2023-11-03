@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4435141501249076601}
   - component: {fileID: 1825684024560603358}
   - component: {fileID: 3513003528093422132}
-  - component: {fileID: 3657531070910305031}
   - component: {fileID: 6482154306158159751}
+  - component: {fileID: 687981183490569065}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -169,19 +169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 1
   _score: 10
---- !u!114 &3657531070910305031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6110056583820197722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 780bd722b62a92948a5cef1e39f65dea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 7
 --- !u!50 &6482154306158159751
 Rigidbody2D:
   serializedVersion: 4
@@ -209,3 +196,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &687981183490569065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110056583820197722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ae7553b7f2a574a9a95747d9a9b635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 7

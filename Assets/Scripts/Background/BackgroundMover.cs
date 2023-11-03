@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +5,12 @@ using UnityEngine.UI;
 public class BackgroundMover : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _maxImagePosition = 1;
 
     private RawImage _image;
     private float _imagePositionX;
 
-    private void Start()
+    private void Awake()
     {
         _image = GetComponent<RawImage>();
         _imagePositionX = _image.uvRect.x;
@@ -21,7 +20,7 @@ public class BackgroundMover : MonoBehaviour
     {
         _imagePositionX += _speed * Time.deltaTime;
 
-        if (_imagePositionX > 1)
+        if (_imagePositionX > _maxImagePosition)
         {
             _imagePositionX = 0;
         }

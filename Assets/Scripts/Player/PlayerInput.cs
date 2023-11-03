@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMover))]
@@ -7,7 +5,7 @@ public class PlayerInput : MonoBehaviour
 {
     private PlayerMover _mover;
 
-    private void Start()
+    private void Awake()
     {
         _mover = GetComponent<PlayerMover>();
     }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -28,7 +26,7 @@ public class GameOverScreen : MonoBehaviour
         _exitGameButton.onClick.RemoveListener(OnExitGameButtonClick);
     }
 
-    private void Start()
+    private void Awake()
     {
         _gameOverGroup = GetComponent<CanvasGroup>();
         _gameOverGroup.alpha = 0;
