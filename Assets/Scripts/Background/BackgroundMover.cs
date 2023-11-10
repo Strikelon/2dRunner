@@ -6,6 +6,7 @@ public class BackgroundMover : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _maxImagePosition = 1;
+    [SerializeField] private float _minImagePosition = 0;
 
     private RawImage _image;
     private float _imagePositionX;
@@ -22,9 +23,9 @@ public class BackgroundMover : MonoBehaviour
 
         if (_imagePositionX > _maxImagePosition)
         {
-            _imagePositionX = 0;
+            _imagePositionX = _minImagePosition;
         }
 
-        _image.uvRect = new Rect(_imagePositionX, 0, _image.uvRect.width, _image.uvRect.height);
+        _image.uvRect = new Rect(_imagePositionX, _minImagePosition, _image.uvRect.width, _image.uvRect.height);
     }
 }

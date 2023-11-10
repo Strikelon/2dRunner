@@ -830,6 +830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.05
+  _maxImagePosition: 1
+  _minImagePosition: 0
 --- !u!114 &665705225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1033,6 +1035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.5
+  _maxImagePosition: 1
+  _minImagePosition: 0
 --- !u!1 &885228193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,8 +2203,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1563964695}
-  - component: {fileID: 1563964694}
-  - component: {fileID: 1563964696}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -2208,29 +2210,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1563964694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563964693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba86598e3333865418790805c4d5c6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 800422203}
-  _capacity: 30
-  _spawnPoints:
-  - {fileID: 1414925259}
-  - {fileID: 1262255369}
-  - {fileID: 932647384}
-  - {fileID: 1383822231}
-  - {fileID: 946139696}
-  - {fileID: 88026369}
-  _prefab: {fileID: 6110056583820197722, guid: 872c2e8cb4d9a9f44a70a9070e8e4d85, type: 3}
-  _secondsBetweenSpawn: 0.4
 --- !u!4 &1563964695
 Transform:
   m_ObjectHideFlags: 0
@@ -2253,29 +2232,6 @@ Transform:
   - {fileID: 800422204}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1563964696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563964693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba86598e3333865418790805c4d5c6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _container: {fileID: 800422203}
-  _capacity: 5
-  _spawnPoints:
-  - {fileID: 1414925259}
-  - {fileID: 1262255369}
-  - {fileID: 932647384}
-  - {fileID: 1383822231}
-  - {fileID: 946139696}
-  - {fileID: 88026369}
-  _prefab: {fileID: 8755728067779453538, guid: 2ad46bed0900ac7479e4ddf796b6b1da, type: 3}
-  _secondsBetweenSpawn: 5
 --- !u!1 &1832566769
 GameObject:
   m_ObjectHideFlags: 0

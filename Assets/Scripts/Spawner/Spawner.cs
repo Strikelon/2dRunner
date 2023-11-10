@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class Spawner : ObjectPool
+public class Spawner<T> : ObjectPool<T> where T : Component
 {
     [SerializeField] private Transform[] _spawnPoints;
-    [SerializeField] private GameObject _prefab;
+    [SerializeField] private T _prefab;
     [SerializeField] private float _secondsBetweenSpawn;
 
     private float _elapsedTime = 0;
@@ -19,7 +19,7 @@ public class Spawner : ObjectPool
 
         if (_elapsedTime >= _secondsBetweenSpawn)
         {
-            if (TryGetObject(out GameObject result))
+            if (TryGetObject(out T result))
             {
                 _elapsedTime = 0;
                 int spawnPointNumber = Random.Range(0, _spawnPoints.Length);
@@ -28,9 +28,9 @@ public class Spawner : ObjectPool
         }
     }
 
-    private void SetObject(GameObject objectGame, Vector3 spawnPoint)
+    private void SetObject(T objectGame, Vector3 spawnPoint)
     {
-        objectGame.SetActive(true);
+        objectGame.gameObject.SetActive(true);
         objectGame.transform.position = spawnPoint;
     }
 }

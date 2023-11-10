@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioSource _healthRecoveryAudio;
 
     private int _baseHealth;
+    private int _minHealth = 0;
 
     public UnityAction Died;
     public UnityAction<int> HealthChanged;
@@ -22,9 +23,9 @@ public class Player : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         _damageAudio.Play();
-        _health -= damage;
+        _health = Mathf.Clamp(_health - damage, _minHealth, _baseHealth);
         HealthChanged?.Invoke(_health);
-        if (_health <= 0)
+        if (_health <= _minHealth)
         {
             Die();
         }
@@ -33,11 +34,8 @@ public class Player : MonoBehaviour
     public void ApplyHealthRecovery(int healthRecovery)
     {
         _healthRecoveryAudio.Play();
-        if (_health + healthRecovery <= _baseHealth)
-        {
-            _health += healthRecovery;
-            HealthChanged?.Invoke(_health);
-        }
+        _health = Mathf.Clamp(_health + healthRecovery, _minHealth, _baseHealth);
+        HealthChanged?.Invoke(_health);
     }
 
     public void Die()
